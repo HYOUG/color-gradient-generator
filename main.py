@@ -10,9 +10,9 @@ from os import getcwd
 def gen_gradient(xy_size: tuple = (1000, 1000), rgb_start: tuple = (0, 0, 0), rgb_end: tuple = (255, 255, 255), fp: str = f"{getcwd()}/gradient.png") -> None:
     """Generate a gradient from the given format and the two RGB given"""
 
-    xy_size = (int(xy_size[0]), int(xy_size[1]))
-    rgb_start = (int(rgb_start[0]), int(rgb_start[1]), int(rgb_start[2]))
-    rgb_end = (int(rgb_end[0]), int(rgb_end[1]), int(rgb_end[2]))
+    xy_size = [int(item) for item in xy_size]
+    rgb_start = [int(item) for item in rgb_start]
+    rgb_end = [int(item) for item in rgb_end]
 
     r_gap = (rgb_end[0] - rgb_start[0]) / xy_size[0]
     g_gap = (rgb_end[1] - rgb_start[1]) / xy_size[0]
