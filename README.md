@@ -3,10 +3,16 @@
 
 ## ⚙️ Usage
 ```bash
-python main.py X_size Y_size R_start G_start B_start R_end G_end B_end
+python3 gradientgen.py X_size Y_size R_start G_start B_start R_end G_end B_end
 ```
 
 ## 📌 Examples
+```bash
+python3 gradientgen.py 1920 1080 255 0 0 255 255 0
+```
+#### Size &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : **1920** x **1080** (*HD 1080*)
+#### RGB (start) &nbsp; : **255 0 0** (*RED*)
+#### RGB (end) &nbsp;&nbsp; : **255 255 0** (*YELLOW*)  
 ![A generated color gradient](https://github.com/HYOUG/GradientGenerator/blob/main/examples/gradient_3.png?raw=true)
 
 ## 📜 License
