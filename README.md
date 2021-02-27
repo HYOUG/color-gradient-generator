@@ -1,6 +1,12 @@
 # Gradient Generator
 #### A simple python script that generate a **color gradient**
 
+## 💾 Installation
+
+```bash
+git clone https://github.com/HYOUG/GradientGenerator.git
+```
+
 ## ⚙️ Usage
 ```bash
 python gradientgen.py X_size Y_size R_start G_start B_start R_end G_end B_end
