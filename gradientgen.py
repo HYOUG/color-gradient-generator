@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# script by "HYOUG"
+# script by HYOUG
 
 from PIL import Image
 from sys import argv
 from os import getcwd
+from random import randint
 
 
-def gen_gradient(xy_size: tuple = (1000, 1000), rgb_start: tuple = (0, 0, 0), rgb_end: tuple = (255, 255, 255), fp: str = f"{getcwd()}/gradient.png") -> None:
+def gen_gradient(xy_size: tuple = (1000, 1000), rgb_start: tuple = (randint(0, 255) for i in range(3)), rgb_end: tuple = (randint(0, 255) for i in range(3)), fp: str = f"{getcwd()}/gradient.png") -> None:
     """Generate a gradient from the given format and the two RGB given"""
-
-    xy_size = [int(item) for item in xy_size]                                       # convert the function's arguments
-    rgb_start = [int(item) for item in rgb_start]                                   # //
-    rgb_end = [int(item) for item in rgb_end]                                       # //
+    xy_size = list(map(int, xy_size))                                               # convert the function's arguments
+    rgb_start = list(map(int, rgb_start))                                           # //
+    rgb_end = list(map(int, rgb_end))                                               # //
 
     r_gap = (rgb_end[0] - rgb_start[0]) / xy_size[0]                                # calculate the gap of the "R" value for every column
     g_gap = (rgb_end[1] - rgb_start[1]) / xy_size[0]                                # calculate the gap of the "G" value for every column
@@ -37,3 +37,8 @@ if __name__ == "__main__":                                                      
     rgb_end = tuple(argv[6:])                                                       # //
 
     gen_gradient(xy_size, rgb_start, rgb_end)                                       # call the gen_gradient function with the command line arguments
+
+    """
+    TODO :
+    command line arguments parser
+    """
